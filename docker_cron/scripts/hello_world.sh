@@ -1,3 +1,3 @@
 #!/bin/bash
-
-echo "test" >> /var/log/cron.log
+. /tmp/test_env
+echo ${TEST_ENV} >> /var/log/cron.log

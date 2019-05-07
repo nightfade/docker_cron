@@ -17,4 +17,4 @@ ADD scripts /root/scripts
 RUN mkdir -p /var/pgsql-backups
 
 # Run the command on container startup
-CMD touch /var/log/cron.log && cron && tail -f /var/log/cron.log
+CMD env > /tmp/test_env && touch /var/log/cron.log && cron && tail -f /var/log/cron.log
